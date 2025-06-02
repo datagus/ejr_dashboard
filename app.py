@@ -1,1 +1,4 @@
-print("Hello this is my first application")
+import streamlit as st
+
+
+print("this will be the first dashboard")
