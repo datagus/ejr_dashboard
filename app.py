@@ -1,4 +1,4 @@
 import streamlit as st
 
 
-print("this will be the first dashboard")
+st.text("this will be the first dashboard")
