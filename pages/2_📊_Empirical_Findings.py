@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import json
+#import json
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -12,11 +12,11 @@ st.title("📊 Main Empirical Findings")
 # Load once and cache using Streamlit's built-in cache
 @st.cache_data
 def load_data():
-    con_file = open("gsheet.json")
-    file_key = json.load(con_file)
-    con_file.close()
+    #con_file = open("gsheet.json")
+    #file_key = json.load(con_file)
+    #con_file.close()
     #loading google spreadsheet
-    spreadsheet_id = file_key["id"]  #from the json file
+    spreadsheet_id = st.secrets["id"]  #from the json file
     url = f"https://docs.google.com/spreadsheets/d/{spreadsheet_id}/export?format=xlsx"
     xls = pd.ExcelFile(url)
     return xls.parse("Sheet1")
