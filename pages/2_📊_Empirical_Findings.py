@@ -96,6 +96,6 @@ with col5:
         selected_variable = select_variable
     # Create the countplot
     fig,ax = plt.subplots()
-    sns.countplot(data=f_df, y=selected_variable, color="purple", ax=ax)
+    sns.countplot(data=f_df, x=selected_variable, color="purple", ax=ax)
     # Display the plot in Streamlit
     st.pyplot(fig)
