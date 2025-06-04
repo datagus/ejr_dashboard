@@ -22,7 +22,9 @@ def load_data():
     return xls.parse("Sheet1")
 
 
-df = load_data()
+df_1 = load_data()
+
+df = df_1.loc[df_1["exclusion reason"]=="-",]
 
 # Creating 3 columns for each filter section
 col1, col2, col3 =  st.columns(3)
